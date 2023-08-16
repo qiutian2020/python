@@ -125,7 +125,8 @@ lrwxrwxrwx. 1 root root 9 6月  25 22:38 /usr/bin/python2 -> python2.7
 ```
 
 
-
+创建虚拟环境
+方法一
 
 使用虚拟环境：由于Python包的各种版本和依赖关系，安装某些包可能会影响其他项目的运行。可以使用Python虚拟环境来隔离每个项目的依赖和版本。例如，使用venv创建虚拟环境：
 
@@ -141,7 +142,20 @@ $ venv/bin/deactivate        # 关闭虚拟环境
 $ venv\Scripts\activate      #(在Windows系统中)
 ```
 
+方法二
+通过virtualenv 命令来创建虚拟环境，首先通过 pip 命令安装虚拟环境工具
 
+```shell
+pip install virtualenv
+```
+
+然后，创建虚拟环境
+```shell
+virtualenv venv
+```
+
+参考
+[pycharm设置虚拟环境与更换镜像教程](https://www.jb51.net/article/221977.htm)
 
 
 虚拟环境三方包安装的位置
