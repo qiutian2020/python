@@ -115,3 +115,15 @@ pip3 config list
 
 
 
+```shell
+[root@centos7 ~]# ls -l /usr/bin/python
+lrwxrwxrwx 1 root root 16 8月  15 15:56 /usr/bin/python -> /usr/bin/python2
+[root@centos7 ~]# ls -l /usr/bin/python2
+lrwxrwxrwx. 1 root root 9 6月  25 22:38 /usr/bin/python2 -> python2.7
+```
+
+
+
+```bash
+[root@centos7 ~]# ls -l /usr/bin/python
+```
