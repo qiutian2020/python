@@ -115,6 +115,8 @@ pip3 config list
 
 
 
+
+
 ```shell
 [root@centos7 ~]# ls -l /usr/bin/python
 lrwxrwxrwx 1 root root 16 8月  15 15:56 /usr/bin/python -> /usr/bin/python2
@@ -124,6 +126,11 @@ lrwxrwxrwx. 1 root root 9 6月  25 22:38 /usr/bin/python2 -> python2.7
 
 
 
-```bash
-[root@centos7 ~]# ls -l /usr/bin/python
+
+使用虚拟环境：由于Python包的各种版本和依赖关系，安装某些包可能会影响其他项目的运行。可以使用Python虚拟环境来隔离每个项目的依赖和版本。例如，使用venv创建虚拟环境：
+
+```shell
+python -m venv myenv
+source myenv/bin/activate (在Linux系统中)
+myenv\Scripts\activate (在Windows系统中)
 ```
