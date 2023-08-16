@@ -21,7 +21,7 @@ ssh协议的实现
 
 报错如下：
 
-<img width="806" alt="image" src="https://github.com/qiutian2020/python/assets/66943119/83cf39b7-61de-466a-9a0f-25c1dd6f513a">
+<img width="960" alt="image" src="https://github.com/qiutian2020/python/assets/66943119/7ff28f4f-1631-45a3-86bd-5c08f322ec33">
 
 
 <img width="962" alt="image" src="https://github.com/qiutian2020/python/assets/66943119/8e43a4f2-c073-418d-b520-68c8d9d2c18b">
