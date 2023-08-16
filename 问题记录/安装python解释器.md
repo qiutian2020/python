@@ -131,6 +131,12 @@ lrwxrwxrwx. 1 root root 9 6月  25 22:38 /usr/bin/python2 -> python2.7
 
 ```shell
 python -m venv myenv
-source myenv/bin/activate (在Linux系统中)
-myenv\Scripts\activate (在Windows系统中)
+source myenv/bin/activate 
+
+
+$ python3 -m venv venv
+$ source venv/bin/activate   # 开启虚拟环境 (在Linux系统中)
+$ venv/bin/deactivate        # 关闭虚拟环境
+
+$ venv\Scripts\activate      #(在Windows系统中)
 ```
