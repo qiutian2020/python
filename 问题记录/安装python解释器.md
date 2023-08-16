@@ -6,7 +6,7 @@ Linux环境自带了Python 2.x版本，但是如果要跟新到3.x的版本，�
 1. 安装依赖库（因为没有这些依赖库可能在源代码构建安装时因为缺失底层依赖库而失败）
 
 参考：
-https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/01.%E5%88%9D%E8%AF%86Python.md
+[Python-100-days](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/01.%E5%88%9D%E8%AF%86Python.md)
 
 ```shell
 yum -y install wget gcc zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
@@ -32,6 +32,10 @@ cd Python-3.7.6
 make && make install
 ```
 
+
+
+
+
 4.修改用户主目录下名为.bash_profile(或.bashrc)的文件，配置PATH环境变量并使其生效
 
 ```shell
@@ -52,5 +56,49 @@ export PATH=$PATH:/usr/local/python37/bin
 ```Shell
 source .bash_profile
 ```
+
+
+
+
+报错：
+```shell
+[root@centos7 Python-3.9.0]# ./configure --prefix=/usr/local/python37 --enable-optimizations
+
+[root@centos7 Python-3.9.0]# make
+
+Could not import runpy module
+Traceback (most recent call last):
+  File "/root/Python-3.9.0/Lib/runpy.py", line 15, in <module>
+    import importlib.util
+  File "/root/Python-3.9.0/Lib/importlib/util.py", line 2, in <module>
+    from . import abc
+  File "/root/Python-3.9.0/Lib/importlib/abc.py", line 17, in <module>
+    from typing import Protocol, runtime_checkable
+  File "/root/Python-3.9.0/Lib/typing.py", line 21, in <module>
+    import collections
+SystemError: <built-in function compile> returned NULL without setting an error
+generate-posix-vars failed
+make[1]: *** [pybuilddir.txt] 错误 1
+make[1]: 离开目录“/root/Python-3.9.0”
+make: *** [profile-opt] 错误 2
+[root@centos7 Python-3.9.0]# 
+
+```
+
+
+解决：
+
+```shell
+[root@centos7 Python-3.9.0]# make clean     # 清除上次的 make命令 所产生的object文件
+
+导致原因
+在低版本的gcc版本中带有 --enable-optimizations 参数时会出现上面问题
+gcc 8.1.0修复此问题
+
+解决方法如下
+1、升级gcc至8.1.0【不推荐】
+2、./configure参数中去掉 --enable-optimizations
+```
+
 
 
