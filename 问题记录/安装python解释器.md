@@ -140,3 +140,10 @@ $ venv/bin/deactivate        # 关闭虚拟环境
 
 $ venv\Scripts\activate      #(在Windows系统中)
 ```
+
+
+
+
+虚拟环境三方包安装的位置
+
+/Users/qt/100_20211110/env_demo/lib/python3.6/site-packages
