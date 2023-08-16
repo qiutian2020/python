@@ -126,6 +126,7 @@ lrwxrwxrwx. 1 root root 9 6月  25 22:38 /usr/bin/python2 -> python2.7
 
 
 创建虚拟环境
+
 方法一
 
 使用虚拟环境：由于Python包的各种版本和依赖关系，安装某些包可能会影响其他项目的运行。可以使用Python虚拟环境来隔离每个项目的依赖和版本。例如，使用venv创建虚拟环境：
