@@ -102,3 +102,16 @@ gcc 8.1.0修复此问题
 
 
 
+设置pip镜像源
+
+```shell
+#检查当前的pip配置
+pip3 config list
+pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 config list
+```
+参考：[Linux (centos) 安装Python3.9](https://blog.csdn.net/rock1112uhhgg/article/details/131938042)
+
+
+
+
